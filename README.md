@@ -1,3 +1,13 @@
+---
+title: License Plate Digits Classification
+emoji: 🚗
+colorFrom: indigo
+colorTo: blue
+sdk: fastapi
+app_file: app.py
+pinned: false
+---
+
 # 🚗 License Plate Digits Classification
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)

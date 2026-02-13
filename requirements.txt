@@ -2,3 +2,6 @@ torch
 torchvision
 Pillow
 tqdm
+fastapi
+uvicorn
+python-multipart
