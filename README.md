@@ -1,39 +1,90 @@
-# License Plate Digits Classification
+# 🚗 License Plate Digits Classification
 
-This project implements an end-to-end CNN-based classifier for license plate digits and letters (0-9 and A-Z).
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-green.svg)](https://fastapi.tiangolo.com/)
 
-## Project Structure
+A premium, end-to-end classification system for license plate digits and letters (0-9 and A-Z) using deep learning and a sleek modern web interface.
 
-- `dataset.py`: Data loading and preprocessing pipeline.
-- `model.py`: CNN architecture definitions.
-- `train.py`: Training script with validation logic.
-- `predict.py`: Inference script for single image classification.
-- `best_model.pth`: The trained model weights (approx. 96% accuracy).
+---
 
-## Requirements
+## ✨ Features
 
-Install dependencies using:
+- **High Accuracy Model**: Custom 3-layer CNN achieving **96.16% validation accuracy**.
+- **Modern Web App**: Premium dark-mode interface with glassmorphism, drag-and-drop, and real-time predictions.
+- **Interactive CLI**: Easy-to-use command-line tool for quick inference and testing.
+- **Robust Pipeline**: Clean modules for dataset handling, model definition, and training.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Deep Learning**: PyTorch, Torchvision
+- **Backend**: FastAPI, Uvicorn
+- **Frontend**: Vanilla JS, Modern CSS (Glassmorphism), HTML5
+- **Data Handling**: PIL, NumPy
+
+---
+
+## 📂 Project Structure
+
+- `app.py`: FastAPI server for the web application and model serving.
+- `model.py`: CNN architecture definition (optimized 32x32 input).
+- `dataset.py`: Data loading, augmentation, and preprocessing.
+- `predict.py`: Interactive CLI script for classification.
+- `train.py`: Training script with automated model checkpointing.
+- `static/`: Modern web frontend assets (HTML, CSS, JS).
+- `best_model.pth`: Pre-trained model weights.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Installation
+Clone the repository and install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## How to use
+### 2. Run the Web App (Recommended)
+Start the modern web interface:
+```bash
+python app.py
+```
+Visit **[http://localhost:8000](http://localhost:8000)** in your browser to start classifying!
 
-### 1. Training
-To train the model from scratch:
+### 3. Use the CLI
+Run the interactive prediction tool:
+```bash
+python predict.py
+```
+Or provide an image path directly:
+```bash
+python predict.py "path/to/image.jpg"
+```
+
+### 4. Training
+If you wish to retrain the model from scratch:
 ```bash
 python train.py
 ```
 
-### 2. Inference
-To classify a single digit/letter image, run the prediction script and provide the path to the image as an argument:
-```bash
-python predict.py path/to/your/image.jpg
-```
-Example:
-```bash
-python predict.py "archive (3)\CNN letter Dataset\A\aug18231_0.jpg"
-```
+---
 
-## Dataset
-The project uses the "CNN letter Dataset" which contains images of digits and uppercase letters organized into folders by class.
+## 📊 Dataset
+The project uses the **CNN letter Dataset**, containing categorized images of digits (0-9) and uppercase letters (A-Z). The pipeline automatically handles resizing, grayscale conversion, and normalization.
+
+---
+
+## 📝 GitHub Deployment Instructions
+1. Create a new repository on GitHub.
+2. Link your local repo and push:
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/License-Plate-Digits-Classification.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+---
+
+Developed with ❤️ using Antigravity
