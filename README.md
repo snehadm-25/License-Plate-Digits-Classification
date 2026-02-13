@@ -3,7 +3,7 @@ title: License Plate Digits Classification
 emoji: 🚗
 colorFrom: indigo
 colorTo: blue
-sdk: fastapi
+sdk: docker
 app_file: app.py
 pinned: false
 ---
