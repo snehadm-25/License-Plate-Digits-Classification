@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Digit Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>License Plate Classifier</h1>
+            <p>Upload a digit or letter image for instant classification</p>
+        </header>
+
+        <div class="drop-zone" id="drop-zone">
+            <div class="drop-zone-content">
+                <div class="upload-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <p>Drag & drop image here or <span>browse</span></p>
+                <input type="file" id="file-input" hidden accept="image/*">
+            </div>
+            <div id="preview-container" class="preview-container hidden">
+                <img id="image-preview" src="" alt="Preview">
+                <button id="remove-btn" class="remove-btn">&times;</button>
+            </div>
+        </div>
+
+        <button id="predict-btn" class="primary-btn" disabled>Classify Now</button>
+
+        <div id="result-container" class="result-container hidden">
+            <div class="result-card">
+                <div class="label">Prediction</div>
+                <div class="value" id="prediction-value">-</div>
+            </div>
+            <div class="result-card">
+                <div class="label">Confidence</div>
+                <div class="value" id="confidence-value">-</div>
+            </div>
+        </div>
+
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Analyzing image...</p>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
